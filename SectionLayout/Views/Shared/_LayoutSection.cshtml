@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_LayoutSection</title>
+</head>
+<body>
+    <div> 
+        <header style="background-color:red;height:200px;">
+            <h2>This is header</h2>
+        </header>
+
+        <div>
+            @RenderSection("pagerender",required:true)
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer style="background-color:black;height:200px;">
+            <script src="aaa"></script>
+            <script src="bbb"></script>
+            <h2>This is footer</h2>
+        </footer>
+
+        <div>
+            Name: 
+            @RenderSection("renderName",required:false)
+        </div>
+
+
+    </div>
+</body>
+</html>
